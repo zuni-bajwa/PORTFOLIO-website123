@@ -1,7 +1,7 @@
-   
+  
     AOS.init();
 
-    const text="an SEO Content Writer based in lahore";
+    const text="a frontend developer based in lahore";
     let index=0;
     let speed = 100;
    function  typeWriter(params) {
@@ -23,7 +23,7 @@
    typeWriter();
     
    //about animation
-   const text1="SEO Content Writer";
+   const text1="Frontend developer";
     let index1=0;
     let speed1 = 100;
    function  typeWriter1( ) {
@@ -46,37 +46,10 @@
    
      
    
-   
-  
-   //active button
-   const button = document.querySelectorAll('.btn1');
     
    
-   button.forEach((btn)=>{
-     btn.addEventListener('click', function() {
-       button.forEach(btn => btn.classList.remove('active'));
-       this.classList.add('active');
-   });
-    
-   })
-    
    
-    
-   const buttons = document.querySelectorAll('.btn11');
-   
-   buttons.forEach((button, index) => {
-       button.addEventListener('click', function() {
-           // Remove active class from all buttons
-           buttons.forEach(btn => btn.classList.remove('active1'));
-   
-           // Find the next button
-           
-      this.classList.add('active1');
-    
-       });
-   });
-    
-   //respo header
+   //responsive header
     
    
    
@@ -88,10 +61,8 @@
          navLinks.classList.toggle('show-nav');
        });
        
-    
    //contact us
-   
-
+ 
        //scroll animation
        window.addEventListener('load', function() {
        const contentt = document.getElementById('myContent');
@@ -147,131 +118,130 @@
        });
    });
    
-   
-   
+  
+   //portfolio
 
 
+   document.getElementById('all').addEventListener('click', function() {
+    showProjects('all');
+});
+
+document.getElementById('blog').addEventListener('click', function() {
+    showProjects('blogs');
+});
+
+document.getElementById('article').addEventListener('click', function() {
+    showProjects('articles');
+});
+
+document.getElementById('pd').addEventListener('click', function() {
+    showProjects('pds');
+});
+
+
+
+document.getElementById('email').addEventListener('click', function() {
+    showProjects('emails');
+});
+
+document.getElementById('content').addEventListener('click', function() {
+    showProjects('contents');
+});
+function showProjects(filter) {
+    const projects = document.querySelectorAll('.project-box1');
+    projects.forEach(function(project) {
+        if (filter === 'all' || project.classList.contains(filter)) {
+            project.classList.remove('hidden');
+        } else {
+            project.classList.add('hidden');
+        }
+    });
+}
+
    
-    document.getElementById('all').addEventListener('click', function() {
-       showProjects('all');
-   });
-   
-   document.getElementById('blog').addEventListener('click', function() {
-       showProjects('blogs');
-   });
-   
-   document.getElementById('article').addEventListener('click', function() {
-       showProjects('articles');
-   });
-   
-   document.getElementById('pd').addEventListener('click', function() {
-       showProjects('pds');
-   });
  
 
-   
-   document.getElementById('email').addEventListener('click', function() {
-       showProjects('emails');
-   });
-   
-   document.getElementById('content').addEventListener('click', function() {
-       showProjects('contents');
-   });
-   function showProjects(filter) {
-       const projects = document.querySelectorAll('.project-box1');
-       projects.forEach(function(project) {
-           if (filter === 'all' || project.classList.contains(filter)) {
-               project.classList.remove('hidden');
-           } else {
-               project.classList.add('hidden');
-           }
-       });
-   }
-   
-      
-    
-   
-   //active button
-   const button = document.querySelectorAll('.btn1');
-    
-   
-   button.forEach((btn)=>{
-     btn.addEventListener('click', function() {
-       button.forEach(btn => btn.classList.remove('active'));
-       this.classList.add('active');
-   });
-    
-   })
-    
-   
-    
-   const buttons = document.querySelectorAll('.btn11');
-   
-   buttons.forEach((button, index) => {
-       button.addEventListener('click', function() {
-           // Remove active class from all buttons
-           buttons.forEach(btn => btn.classList.remove('active1'));
-   
-           // Find the next button
-           
-      this.classList.add('active1');
-    
-       });
-   });
-   
-   const openPopupBtn = document.getElementById('blogs'); // single button
+//active button
+const button = document.querySelectorAll('.btn1');
  
-   const modal = document.getElementById('modal');
-   const closePopupBtn = document.querySelector('.modal-close');
-   
-   openPopupBtn.addEventListener('click', function() {
-     modal.classList.add('show');
-   });
-   closePopupBtn.addEventListener('click', function() {
-     modal.classList.remove('show');
-   });
 
-
-   const openPopupBtn1 = document.getElementById('articles'); // single button
-   const openPopupBtn2 = document.getElementById('pds'); // single button
-   const openPopupBtn3 = document.getElementById('emails'); // single button
-   const openPopupBtn4 = document.getElementById('contents'); // single button
-    const closePopupBtn1 = document.querySelector('.modal-close1');
-   const closePopupBtn2 = document.querySelector('.web-2');
-   const closePopupBtn3 = document.querySelector('.web-3');
-   const closePopupBtn4 = document.querySelector('.web-4');
-
-
-
-   const modal1 = document.getElementById('modal1');
-   const web2 = document.getElementById('web-2');
-   const web3 = document.getElementById('web-3');
-   const  web4 = document.getElementById('web-4');
+button.forEach((btn)=>{
+  btn.addEventListener('click', function() {
+    button.forEach(btn => btn.classList.remove('active'));
+    this.classList.add('active');
+});
  
-   openPopupBtn1.addEventListener('click', function() {
-     modal1.classList.add('show');
-   });
-   closePopupBtn1.addEventListener('click', function() {
-     modal1.classList.remove('show');
-   });
+})
+ 
 
-   openPopupBtn2.addEventListener('click', function() {
-    web2.classList.add('show');
-   });
-   closePopupBtn2.addEventListener('click', function() {
-     web2.classList.remove('show');
-   });
+ 
+const buttons = document.querySelectorAll('.btn11');
 
-   openPopupBtn3.addEventListener('click', function() {
-    web3.classList.add('show');
-   });
-   closePopupBtn3.addEventListener('click', function() {
-     web3.classList.remove('show');
-   });
+buttons.forEach((button, index) => {
+    button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        buttons.forEach(btn => btn.classList.remove('active1'));
 
-   openPopupBtn4.addEventListener('click', function() {
-    web4.classList.add('show');
-   });
-   closePopupBtn4.addEventListener('click', function() {
-     web4.classList.remove('show');
-   });
+        // Find the next button
+        
+   this.classList.add('active1');
+ 
+    });
+});
+
+const openPopupBtn = document.getElementById('blogs'); // single button
+
+const modal = document.getElementById('modal');
+const closePopupBtn = document.querySelector('.modal-close');
+
+openPopupBtn.addEventListener('click', function() {
+  modal.classList.add('show');
+});
+closePopupBtn.addEventListener('click', function() {
+  modal.classList.remove('show');
+});
+
+
+const openPopupBtn1 = document.getElementById('articles'); // single button
+const openPopupBtn2 = document.getElementById('pds'); // single button
+const openPopupBtn3 = document.getElementById('emails'); // single button
+const openPopupBtn4 = document.getElementById('contents'); // single button
+ const closePopupBtn1 = document.querySelector('.modal-close1');
+const closePopupBtn2 = document.querySelector('.web-2');
+const closePopupBtn3 = document.querySelector('.web-3');
+const closePopupBtn4 = document.querySelector('.web-4');
+
+
+
+const modal1 = document.getElementById('modal1');
+const web2 = document.getElementById('web-2');
+const web3 = document.getElementById('web-3');
+const  web4 = document.getElementById('web-4');
+
+openPopupBtn1.addEventListener('click', function() {
+  modal1.classList.add('show');
+});
+closePopupBtn1.addEventListener('click', function() {
+  modal1.classList.remove('show');
+});
+
+openPopupBtn2.addEventListener('click', function() {
+ web2.classList.add('show');
+});
+closePopupBtn2.addEventListener('click', function() {
+  web2.classList.remove('show');
+});
+
+openPopupBtn3.addEventListener('click', function() {
+ web3.classList.add('show');
+});
+closePopupBtn3.addEventListener('click', function() {
+  web3.classList.remove('show');
+});
+
+openPopupBtn4.addEventListener('click', function() {
+ web4.classList.add('show');
+});
+closePopupBtn4.addEventListener('click', function() {
+  web4.classList.remove('show');
+});
